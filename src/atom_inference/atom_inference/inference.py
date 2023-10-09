@@ -9,7 +9,7 @@ import pycuda.driver as cuda
 import time
 import rclpy
 from rclpy.node import Node
-
+import os
 from std_msgs.msg import Int16
 
 
@@ -20,6 +20,8 @@ cuda_inputs  = []
 host_outputs = []
 cuda_outputs = []
 bindings = []
+
+print("-------------------------------------", os.getcwd())
 
 
 class YoloTRT():
