@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 import sys
+from yoloDet import YoloTRT
 import cv2 
 import imutils
-from yoloDet import YoloTRT
 from gstreamer import gstreamer_pipeline
 
 
