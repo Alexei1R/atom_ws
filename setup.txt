@@ -1,0 +1,18 @@
+
+alias c=clear
+alias s="source ~/.bashrc"
+alias f=ranger
+alias i="sudo apt-get install"
+alias n="neofetch"
+alias u="sudo apt-get update && sudo apt-get upgrade"
+alias b="colcon build"
+alias m="mkdir"
+alias t="touch"
+alias r="rm -rf"
+alias g="gedit ~/.bashrc"
+
+source /opt/ros/dashing/setup.bash
+source /usr/share/colcon_cd/function/colcon_cd.sh
+export _colcon_cd_root=/opt/ros/dashing/
+source /home/toor/Desktop/atom_ws/install/setup.bash
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
