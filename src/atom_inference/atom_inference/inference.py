@@ -52,6 +52,9 @@ class Inference(Node):
 
                 offset_text = f"Offset: X={offset_x:.2f}, Y={offset_y:.2f}"
                 cv2.putText(frame, offset_text, (int(center_x), int(center_y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+                y_offset_msg = Int16()
+                y_offset_msg.data = offset_x
+                self.publisher.publish(y_offset_msg)
 
             cv2.putText(frame, f"FPS: {fps:.2f}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             cv2.imshow("Output", frame)
