@@ -38,7 +38,7 @@ class Inference(Node):
             frame = imutils.resize(frame, width=600)
             detections, t = model.Inference(frame)
             fps = 1 / t
-            
+
             for obj in detections:
                 box = obj['box']
                 # Calculate the center of the bounding box
@@ -50,12 +50,8 @@ class Inference(Node):
                 offset_y = center_y - frame.shape[0] / 2
 
                 offset_text = f"Offset: X={offset_x:.2f}, Y={offset_y:.2f}"
-                cv2.putText(frame, offset_text, (int(center_x), int(center_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 255, 0), 1)
+                cv2.putText(frame, offset_text, (int(center_x), int(center_y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-            
-            
-            
-            
             cv2.putText(frame, f"FPS: {fps:.2f}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             cv2.imshow("Output", frame)
             key = cv2.waitKey(1)
