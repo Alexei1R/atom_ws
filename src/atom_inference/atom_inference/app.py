@@ -1,4 +1,3 @@
-import sys
 import cv2 
 import imutils
 from yoloDet import YoloTRT
@@ -49,20 +48,9 @@ while True:
     frame = imutils.resize(frame, width=600)
     detections, t = model.Inference(frame)
     fps = 1 / t
-
     for obj in detections:
-        box = obj['box']
-        # Calculate the center of the bounding box
-        center_x = (box[0] + box[2]) / 2
-        center_y = (box[1] + box[3]) / 2
-
-        # Calculate the offset from the center
-        offset_x = center_x - frame.shape[1] / 2
-        offset_y = center_y - frame.shape[0] / 2
-
-        offset_text = f"Offset: X={offset_x:.2f}, Y={offset_y:.2f}"
-        cv2.putText(frame, offset_text, (int(center_x), int(center_y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-
+        print(obj['box'])
+        cv2.putText(frame, obj['box'], (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     cv2.putText(frame, f"FPS: {fps:.2f}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     cv2.imshow("Output", frame)
     key = cv2.waitKey(1)
