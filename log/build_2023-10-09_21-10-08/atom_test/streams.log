@@ -1,0 +1,29 @@
+[0.935s] Invoking command in '/home/toor/Desktop/atom_ws/src/atom_test': PYTHONPATH=/home/toor/Desktop/atom_ws/build/atom_test/prefix_override:/home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atom_test build --build-base /home/toor/Desktop/atom_ws/build/atom_test/build install --record /home/toor/Desktop/atom_ws/build/atom_test/install.log --single-version-externally-managed
+[1.116s] running egg_info
+[1.117s] writing ../../build/atom_test/atom_test.egg-info/PKG-INFO
+[1.117s] writing dependency_links to ../../build/atom_test/atom_test.egg-info/dependency_links.txt
+[1.117s] writing entry points to ../../build/atom_test/atom_test.egg-info/entry_points.txt
+[1.117s] writing requirements to ../../build/atom_test/atom_test.egg-info/requires.txt
+[1.118s] writing top-level names to ../../build/atom_test/atom_test.egg-info/top_level.txt
+[1.151s] reading manifest file '../../build/atom_test/atom_test.egg-info/SOURCES.txt'
+[1.153s] writing manifest file '../../build/atom_test/atom_test.egg-info/SOURCES.txt'
+[1.153s] running build
+[1.153s] running build_py
+[1.153s] copying atom_test/atom_test.py -> /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test
+[1.153s] copying atom_test/__init__.py -> /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test
+[1.153s] running install
+[1.154s] running install_lib
+[1.154s] copying /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test/atom_test.py -> /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test
+[1.154s] copying /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test/__init__.py -> /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test
+[1.154s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test/atom_test.py to atom_test.cpython-36.pyc
+[1.155s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test/__init__.py to __init__.cpython-36.pyc
+[1.155s] running install_data
+[1.155s] copying resource/atom_test -> /home/toor/Desktop/atom_ws/install/atom_test/share/ament_index/resource_index/packages
+[1.155s] copying package.xml -> /home/toor/Desktop/atom_ws/install/atom_test/share/atom_test
+[1.156s] running install_egg_info
+[1.157s] removing '/home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test-0.0.0-py3.6.egg-info' (and everything under it)
+[1.157s] Copying ../../build/atom_test/atom_test.egg-info to /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test-0.0.0-py3.6.egg-info
+[1.158s] running install_scripts
+[1.175s] Installing atom_test script to /home/toor/Desktop/atom_ws/install/atom_test/lib/atom_test
+[1.175s] writing list of installed files to '/home/toor/Desktop/atom_ws/build/atom_test/install.log'
+[1.219s] Invoked command in '/home/toor/Desktop/atom_ws/src/atom_test' returned '0': PYTHONPATH=/home/toor/Desktop/atom_ws/build/atom_test/prefix_override:/home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atom_test build --build-base /home/toor/Desktop/atom_ws/build/atom_test/build install --record /home/toor/Desktop/atom_ws/build/atom_test/install.log --single-version-externally-managed

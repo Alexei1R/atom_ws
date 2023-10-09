@@ -11,6 +11,7 @@ setup.py
 atom_inference/__init__.py
 atom_inference/app.py
 atom_inference/gen_wts.py
+atom_inference/gstreamer.py
 atom_inference/inference.py
 atom_inference/yoloDet.py
 resource/atom_inference
