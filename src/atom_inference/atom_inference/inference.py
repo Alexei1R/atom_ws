@@ -3,7 +3,7 @@ import sys
 from atom_inference.yoloDet import YoloTRT
 import cv2 
 import imutils
-from gstreamer import gstreamer_pipeline
+from atom_inference.gstreamer import gstreamer_pipeline
 
 
 import rclpy
