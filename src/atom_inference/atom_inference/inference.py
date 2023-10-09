@@ -17,7 +17,7 @@ from std_msgs.msg import Int16
 # use path for library and engine file
 model = YoloTRT(library="yolov5/build/libmyplugins.so", engine="yolov5/build/best.engine", conf=0.5, yolo_ver="v5")
 cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
-frame_count = 0
+
 
 
 
@@ -25,15 +25,16 @@ class Inference(Node):
     def __init__(self):
         super().__init__('inferece')
         self.publisher_ = self.create_publisher(Int16, 'inference', 10)
-        
+        self.frame_count = 0
+    
         
 
     def runIference(self):
         while True:
             ret, frame = cap.read()
-            frame_count += 1
+            self.frame_count += 1
 
-            if frame_count % 3 != 0:  # Skip every 2 out of 3 frames to achieve 10 fps processing
+            if self.frame_count % 3 != 0:  # Skip every 2 out of 3 frames to achieve 10 fps processing
                 continue
             frame = imutils.resize(frame, width=600)
             detections, t = model.Inference(frame)
