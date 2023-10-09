@@ -24,6 +24,7 @@ bindings = []
 os.chdir("src/atom_inference/atom_inference")
 
 
+
 class YoloTRT():
     def __init__(self, library, engine, conf, yolo_ver):
         self.CONF_THRESH = conf 
