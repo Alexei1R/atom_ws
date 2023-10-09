@@ -21,7 +21,7 @@ host_outputs = []
 cuda_outputs = []
 bindings = []
 
-print("-------------------------------------", os.getcwd())
+os.chdir("/home/toor/atom_ws/src/atom_inference/atom_inference")
 
 
 class YoloTRT():
