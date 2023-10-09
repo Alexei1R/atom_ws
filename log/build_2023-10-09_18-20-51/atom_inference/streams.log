@@ -1,0 +1,46 @@
+[0.952s] Invoking command in '/home/toor/Desktop/atom_ws/src/atom_inference': PYTHONPATH=/home/toor/Desktop/atom_ws/build/atom_inference/prefix_override:/home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atom_inference build --build-base /home/toor/Desktop/atom_ws/build/atom_inference/build install --record /home/toor/Desktop/atom_ws/build/atom_inference/install.log --install-scripts $base/lib/atom_inference --single-version-externally-managed
+[1.129s] running egg_info
+[1.130s] creating ../../build/atom_inference/atom_inference.egg-info
+[1.130s] writing ../../build/atom_inference/atom_inference.egg-info/PKG-INFO
+[1.130s] writing dependency_links to ../../build/atom_inference/atom_inference.egg-info/dependency_links.txt
+[1.130s] writing entry points to ../../build/atom_inference/atom_inference.egg-info/entry_points.txt
+[1.130s] writing requirements to ../../build/atom_inference/atom_inference.egg-info/requires.txt
+[1.130s] writing top-level names to ../../build/atom_inference/atom_inference.egg-info/top_level.txt
+[1.130s] writing manifest file '../../build/atom_inference/atom_inference.egg-info/SOURCES.txt'
+[1.165s] reading manifest file '../../build/atom_inference/atom_inference.egg-info/SOURCES.txt'
+[1.166s] writing manifest file '../../build/atom_inference/atom_inference.egg-info/SOURCES.txt'
+[1.167s] running build
+[1.167s] running build_py
+[1.167s] creating /home/toor/Desktop/atom_ws/build/atom_inference/build
+[1.167s] creating /home/toor/Desktop/atom_ws/build/atom_inference/build/lib
+[1.167s] creating /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference
+[1.167s] copying atom_inference/yoloDet.py -> /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference
+[1.167s] copying atom_inference/gen_wts.py -> /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference
+[1.167s] copying atom_inference/__init__.py -> /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference
+[1.167s] copying atom_inference/inference.py -> /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference
+[1.167s] copying atom_inference/app.py -> /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference
+[1.167s] running install
+[1.168s] running install_lib
+[1.168s] creating /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference
+[1.168s] copying /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference/yoloDet.py -> /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference
+[1.168s] copying /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference/gen_wts.py -> /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference
+[1.168s] copying /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference/__init__.py -> /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference
+[1.168s] copying /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference/inference.py -> /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference
+[1.169s] copying /home/toor/Desktop/atom_ws/build/atom_inference/build/lib/atom_inference/app.py -> /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference
+[1.169s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference/yoloDet.py to yoloDet.cpython-36.pyc
+[1.170s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference/gen_wts.py to gen_wts.cpython-36.pyc
+[1.171s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference/__init__.py to __init__.cpython-36.pyc
+[1.171s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference/inference.py to inference.cpython-36.pyc
+[1.171s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference/app.py to app.cpython-36.pyc
+[1.171s] running install_data
+[1.172s] creating /home/toor/Desktop/atom_ws/install/atom_inference/share/ament_index
+[1.172s] creating /home/toor/Desktop/atom_ws/install/atom_inference/share/ament_index/resource_index
+[1.172s] creating /home/toor/Desktop/atom_ws/install/atom_inference/share/ament_index/resource_index/packages
+[1.172s] copying resource/atom_inference -> /home/toor/Desktop/atom_ws/install/atom_inference/share/ament_index/resource_index/packages
+[1.172s] copying package.xml -> /home/toor/Desktop/atom_ws/install/atom_inference/share/atom_inference
+[1.172s] running install_egg_info
+[1.174s] Copying ../../build/atom_inference/atom_inference.egg-info to /home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages/atom_inference-0.0.0-py3.6.egg-info
+[1.174s] running install_scripts
+[1.192s] Installing inference_node script to /home/toor/Desktop/atom_ws/install/atom_inference/lib/atom_inference
+[1.192s] writing list of installed files to '/home/toor/Desktop/atom_ws/build/atom_inference/install.log'
+[1.225s] Invoked command in '/home/toor/Desktop/atom_ws/src/atom_inference' returned '0': PYTHONPATH=/home/toor/Desktop/atom_ws/build/atom_inference/prefix_override:/home/toor/Desktop/atom_ws/install/atom_inference/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atom_inference build --build-base /home/toor/Desktop/atom_ws/build/atom_inference/build install --record /home/toor/Desktop/atom_ws/build/atom_inference/install.log --install-scripts $base/lib/atom_inference --single-version-externally-managed

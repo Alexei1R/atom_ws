@@ -1,0 +1,3 @@
+[console_scripts]
+inference_node = atom_inference.inference:main
+
