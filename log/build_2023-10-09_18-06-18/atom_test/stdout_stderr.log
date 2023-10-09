@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/atom_test/atom_test.egg-info
+writing ../../build/atom_test/atom_test.egg-info/PKG-INFO
+writing dependency_links to ../../build/atom_test/atom_test.egg-info/dependency_links.txt
+writing entry points to ../../build/atom_test/atom_test.egg-info/entry_points.txt
+writing requirements to ../../build/atom_test/atom_test.egg-info/requires.txt
+writing top-level names to ../../build/atom_test/atom_test.egg-info/top_level.txt
+writing manifest file '../../build/atom_test/atom_test.egg-info/SOURCES.txt'
+reading manifest file '../../build/atom_test/atom_test.egg-info/SOURCES.txt'
+writing manifest file '../../build/atom_test/atom_test.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/toor/Desktop/atom_ws/build/atom_test/build
+creating /home/toor/Desktop/atom_ws/build/atom_test/build/lib
+creating /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test
+copying atom_test/atom_test.py -> /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test
+copying atom_test/__init__.py -> /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test
+running install
+running install_lib
+creating /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test
+copying /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test/atom_test.py -> /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test
+copying /home/toor/Desktop/atom_ws/build/atom_test/build/lib/atom_test/__init__.py -> /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test
+byte-compiling /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test/atom_test.py to atom_test.cpython-36.pyc
+byte-compiling /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test/__init__.py to __init__.cpython-36.pyc
+running install_data
+creating /home/toor/Desktop/atom_ws/install/atom_test/share/ament_index
+creating /home/toor/Desktop/atom_ws/install/atom_test/share/ament_index/resource_index
+creating /home/toor/Desktop/atom_ws/install/atom_test/share/ament_index/resource_index/packages
+copying resource/atom_test -> /home/toor/Desktop/atom_ws/install/atom_test/share/ament_index/resource_index/packages
+copying package.xml -> /home/toor/Desktop/atom_ws/install/atom_test/share/atom_test
+running install_egg_info
+Copying ../../build/atom_test/atom_test.egg-info to /home/toor/Desktop/atom_ws/install/atom_test/lib/python3.6/site-packages/atom_test-0.0.0-py3.6.egg-info
+running install_scripts
+Installing atom_test script to /home/toor/Desktop/atom_ws/install/atom_test/lib/atom_test
+writing list of installed files to '/home/toor/Desktop/atom_ws/build/atom_test/install.log'

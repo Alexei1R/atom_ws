@@ -1,0 +1,37 @@
+[0.740s] Invoking command in '/home/toor/Desktop/atom_ws/src/atom_communication': PYTHONPATH=/home/toor/Desktop/atom_ws/build/atom_communication/prefix_override:/home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atom_communication build --build-base /home/toor/Desktop/atom_ws/build/atom_communication/build install --record /home/toor/Desktop/atom_ws/build/atom_communication/install.log --single-version-externally-managed
+[0.920s] running egg_info
+[0.920s] creating ../../build/atom_communication/atom_communication.egg-info
+[0.920s] writing ../../build/atom_communication/atom_communication.egg-info/PKG-INFO
+[0.921s] writing dependency_links to ../../build/atom_communication/atom_communication.egg-info/dependency_links.txt
+[0.921s] writing entry points to ../../build/atom_communication/atom_communication.egg-info/entry_points.txt
+[0.921s] writing requirements to ../../build/atom_communication/atom_communication.egg-info/requires.txt
+[0.921s] writing top-level names to ../../build/atom_communication/atom_communication.egg-info/top_level.txt
+[0.921s] writing manifest file '../../build/atom_communication/atom_communication.egg-info/SOURCES.txt'
+[0.955s] reading manifest file '../../build/atom_communication/atom_communication.egg-info/SOURCES.txt'
+[0.956s] writing manifest file '../../build/atom_communication/atom_communication.egg-info/SOURCES.txt'
+[0.956s] running build
+[0.956s] running build_py
+[0.956s] creating /home/toor/Desktop/atom_ws/build/atom_communication/build
+[0.956s] creating /home/toor/Desktop/atom_ws/build/atom_communication/build/lib
+[0.957s] creating /home/toor/Desktop/atom_ws/build/atom_communication/build/lib/atom_communication
+[0.957s] copying atom_communication/tcp_servernode.py -> /home/toor/Desktop/atom_ws/build/atom_communication/build/lib/atom_communication
+[0.957s] copying atom_communication/__init__.py -> /home/toor/Desktop/atom_ws/build/atom_communication/build/lib/atom_communication
+[0.957s] running install
+[0.957s] running install_lib
+[0.958s] creating /home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages/atom_communication
+[0.958s] copying /home/toor/Desktop/atom_ws/build/atom_communication/build/lib/atom_communication/tcp_servernode.py -> /home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages/atom_communication
+[0.958s] copying /home/toor/Desktop/atom_ws/build/atom_communication/build/lib/atom_communication/__init__.py -> /home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages/atom_communication
+[0.958s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages/atom_communication/tcp_servernode.py to tcp_servernode.cpython-36.pyc
+[0.959s] byte-compiling /home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages/atom_communication/__init__.py to __init__.cpython-36.pyc
+[0.959s] running install_data
+[0.960s] creating /home/toor/Desktop/atom_ws/install/atom_communication/share/ament_index
+[0.960s] creating /home/toor/Desktop/atom_ws/install/atom_communication/share/ament_index/resource_index
+[0.960s] creating /home/toor/Desktop/atom_ws/install/atom_communication/share/ament_index/resource_index/packages
+[0.960s] copying resource/atom_communication -> /home/toor/Desktop/atom_ws/install/atom_communication/share/ament_index/resource_index/packages
+[0.960s] copying package.xml -> /home/toor/Desktop/atom_ws/install/atom_communication/share/atom_communication
+[0.960s] running install_egg_info
+[0.961s] Copying ../../build/atom_communication/atom_communication.egg-info to /home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages/atom_communication-0.0.0-py3.6.egg-info
+[0.962s] running install_scripts
+[0.978s] Installing tcp_servernode script to /home/toor/Desktop/atom_ws/install/atom_communication/lib/atom_communication
+[0.978s] writing list of installed files to '/home/toor/Desktop/atom_ws/build/atom_communication/install.log'
+[1.006s] Invoked command in '/home/toor/Desktop/atom_ws/src/atom_communication' returned '0': PYTHONPATH=/home/toor/Desktop/atom_ws/build/atom_communication/prefix_override:/home/toor/Desktop/atom_ws/install/atom_communication/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atom_communication build --build-base /home/toor/Desktop/atom_ws/build/atom_communication/build install --record /home/toor/Desktop/atom_ws/build/atom_communication/install.log --single-version-externally-managed

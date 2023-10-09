@@ -1,0 +1,3 @@
+[console_scripts]
+tcp_servernode = atom_communication.tcp_servernode:main
+

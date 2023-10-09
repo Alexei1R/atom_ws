@@ -1,0 +1,3 @@
+[console_scripts]
+atom_test = atom_test.atom_test:main
+
