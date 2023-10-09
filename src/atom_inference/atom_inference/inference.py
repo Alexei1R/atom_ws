@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import sys
-from src.atom_inference.atom_inference.yoloDet import YoloTRT
+from yoloDet import YoloTRT
 import cv2 
 import imutils
 from gstreamer import gstreamer_pipeline
