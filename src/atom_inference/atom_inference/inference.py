@@ -23,7 +23,7 @@ cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
 
 class Inference(Node):
     def __init__(self):
-        super().__init__('inferece')
+        super().__init__('inference')
         self.publisher_ = self.create_publisher(Int16, 'inference', 10)
         self.frame_count = 0
     
