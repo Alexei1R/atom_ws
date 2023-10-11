@@ -15,7 +15,7 @@ time.sleep(1)
 try:
     while True:
         
-        serial_port.write(b'75 60\r\n')
+        serial_port.write(b'1:90')
 
         if serial_port.inWaiting() > 0:
             data = serial_port.read()
