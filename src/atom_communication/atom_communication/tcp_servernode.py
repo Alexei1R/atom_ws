@@ -1,9 +1,23 @@
 import rclpy
 from rclpy.node import Node
-import socket
 
 import time
 import serial
+
+
+import socket
+import threading
+HOST = '0.0.0.0'
+PORT = 12345
+
+
+# Create a TCP socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind((HOST, PORT))
+server_socket.listen()
+print(f"Server is listening on {HOST}:{PORT}")
+clients = []
+IsConnected = False
 
 
 
