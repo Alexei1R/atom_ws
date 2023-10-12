@@ -56,7 +56,7 @@ class TCPServerNode(Node):
                 break
             message = data.decode('utf-8')
             print(f"Received from client: {message}")
-            self.serial_port.write(b'1:90')
+            self.serial_port.write(message.encode('ascii'))
             if self.serial_port.inWaiting() > 0:
                 data = self.serial_port.read()
                 print(data)
