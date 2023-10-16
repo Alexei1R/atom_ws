@@ -42,7 +42,7 @@ namespace ATOM {
             cap >> frame;
             frame.copyTo(m_FrameOut);
             lines->OnUpdate();
-            m_FrameOut = lines->GetPreprocessed();
+            m_FrameOut = lines->GetPreprocesed();
 
             // If the frame is empty, break immediately
             if (frame.empty()) {
