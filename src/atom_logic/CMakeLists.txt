@@ -16,9 +16,19 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
+# find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(image_transport REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(OpenCV REQUIRED)
 
+
+include_directories(${OpenCV_INCLUDE_DIRS})
+link_directories(${OpenCV_LIBRARY_DIRS})
+add_definitions(${OpenCV_DEFINITIONS})
 
 add_executable(atom_core_logic_node 
   "src/main.cpp"
@@ -27,8 +37,21 @@ add_executable(atom_core_logic_node
   "src/WebCamStream.cpp"
 
 )
-ament_target_dependencies(atom_core_logic_node rclcpp OpenCV)
+ament_target_dependencies(
+  atom_core_logic_node
+  "rclcpp"
+  "image_transport"
+  "cv_bridge"
+  "sensor_msgs"
+  "std_msgs"
+  "OpenCV"
+  "PCL"
+  "pcl_conversions"
+)
 
+target_link_libraries(node
+  ${OpenCV_LIBS}
+)
 
 
 
@@ -39,6 +62,7 @@ install(TARGETS
 
 include_directories(
   include
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 
