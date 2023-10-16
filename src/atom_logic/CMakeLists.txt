@@ -45,8 +45,6 @@ ament_target_dependencies(
   "sensor_msgs"
   "std_msgs"
   "OpenCV"
-  "PCL"
-  "pcl_conversions"
 )
 
 target_link_libraries(node
