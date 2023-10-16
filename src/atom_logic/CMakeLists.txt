@@ -39,7 +39,7 @@ ament_target_dependencies(
   "OpenCV"
 )
 
-target_link_libraries(node
+target_link_libraries(atom_core_logic_node
   ${OpenCV_LIBS}
 )
  
