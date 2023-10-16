@@ -23,38 +23,40 @@
 int left = 200;
 int right = 400;
 
-namespace ATOM {
+int main()
+{
+    cv::VideoCapture cap(0);
 
-    int main() {
-        cv::VideoCapture cap(0);
-
-        if (!cap.isOpened()) {
-            std::cout << "Error opening video stream or file" << std::endl;
-            return -1;
-        }
-
-        cv::Mat m_FrameOut;
-        FindLines* lines = new FindLines(m_FrameOut, left, right);
-        lines->OnAttach();
-
-        while (true) {
-            cv::Mat frame;
-            cap >> frame;
-            frame.copyTo(m_FrameOut);
-            lines->OnUpdate();
-            m_FrameOut = lines->GetPreprocesed();
-
-            // If the frame is empty, break immediately
-            if (frame.empty()) {
-                break;
-            }
-
-            cv::imshow("Lines", m_FrameOut);
-            if (cv::waitKey(5) >= 0) {
-                break;
-            }
-        }
-
-        return 0;
+    if (!cap.isOpened())
+    {
+        std::cout << "Error opening video stream or file" << std::endl;
+        return -1;
     }
+
+    cv::Mat m_FrameOut;
+    FindLines *lines = new FindLines(m_FrameOut, left, right);
+    lines->OnAttach();
+
+    while (true)
+    {
+        cv::Mat frame;
+        cap >> frame;
+        frame.copyTo(m_FrameOut);
+        lines->OnUpdate();
+        m_FrameOut = lines->GetPreprocesed();
+
+        // If the frame is empty, break immediately
+        if (frame.empty())
+        {
+            break;
+        }
+
+        cv::imshow("Lines", m_FrameOut);
+        if (cv::waitKey(5) >= 0)
+        {
+            break;
+        }
+    }
+
+    return 0;
 }
