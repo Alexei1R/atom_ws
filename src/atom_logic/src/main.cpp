@@ -3,6 +3,11 @@
 #include "atom_logic/FindLines.h"
 #include "atom_logic/WebCamStream.h"
 
+
+
+//opencv 
+#include <opencv2/opencv.hpp>
+
 #define PID_KP 2.0f
 #define PID_KI 0.5f
 #define PID_KD 0.25f
@@ -20,6 +25,10 @@
 /* Maximum run-time of simulation */
 #define SIMULATION_TIME_MAX 4.0f
 
+
+int left = 200;
+int right = 400;
+
 namespace ATOM
 {
 
@@ -27,36 +36,46 @@ namespace ATOM
 
     int main()
     {
-        WebcamStream ws;
-        FindLines *m_FindLines;
-        PIDController pid = {PID_KP, PID_KI, PID_KD,
-                             PID_TAU,
-                             PID_LIM_MIN, PID_LIM_MAX,
-                             PID_LIM_MIN_INT, PID_LIM_MAX_INT,
-                             SAMPLE_TIME_S};
 
-        cv::Mat *frame;
-        cv::Mat m_Frame;
+        cv::VideoCapture cap(0);
+        if(!cap.isOpened()){
+            std::cout << "Error opening video stream or file" << std::endl;
+            return -1;
+        }
+
+
         cv::Mat m_FrameOut;
-
-        ws.start();
-        int left = 200;
-	    int right = 400;
-        m_FindLines = new FindLines(m_Frame, left, right);
-        PIDController_Init(&pid);
+        FindLines* lines = new FindLines(m_FrameOut,left,right);
+        lines->OnAttach();
+        
 
         while (true)
         {
-            std::cout << "Hello World!" << std::endl;
+            cv::Mat frame;
+            cap >> frame;
+            frame.copyTo(m_FrameOut);
+            lines->OnUpdate();
+            m_FrameOut = lines->GetPreprocesed();
 
-            frame = ws.read();
-            frame->copyTo(m_Frame);
-            frame->copyTo(m_FrameOut);
+        
+            // If the frame is empty, break immediately
+            if (frame.empty())
+              break;
 
-            m_FrameOut = m_FindLines->GetPreprocesed();
-            PIDController_Update(&pid, 0, m_FindLines->GetOffesetCenter());
+
+
 
             cv::imshow("Lines", m_FrameOut);
+			if (cv::waitKey(5) >= 0) {
+				break;
+			}
+
+
+
+
+
+
+
         }
 
         return 0;
