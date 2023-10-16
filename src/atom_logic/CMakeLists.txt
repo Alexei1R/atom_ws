@@ -19,9 +19,6 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(cv_bridge REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(std_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 
 
@@ -39,9 +36,6 @@ add_executable(atom_core_logic_node
 ament_target_dependencies(
   atom_core_logic_node
   "rclcpp"
-  "cv_bridge"
-  "sensor_msgs"
-  "std_msgs"
   "OpenCV"
 )
 
