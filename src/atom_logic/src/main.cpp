@@ -51,7 +51,7 @@ int main()
         {
             break;
         }
-
+        cv::resize(m_FrameOut, m_FrameOut, cv::Size(320, 240));
         cv::imshow("Lines", m_FrameOut);
         if (cv::waitKey(5) >= 0)
         {
