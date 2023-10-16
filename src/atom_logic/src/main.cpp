@@ -41,6 +41,7 @@ int main()
     {
         cv::Mat frame;
         cap >> frame;
+        cv::resize(frame, frame, cv::Size(640, 480));
         frame.copyTo(m_FrameOut);
         lines->OnUpdate();
         m_FrameOut = lines->GetPreprocesed();
