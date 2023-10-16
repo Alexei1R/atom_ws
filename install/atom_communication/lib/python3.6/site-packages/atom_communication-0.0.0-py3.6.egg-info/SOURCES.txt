@@ -9,7 +9,9 @@ setup.py
 ../../build/atom_communication/atom_communication.egg-info/top_level.txt
 ../../build/atom_communication/atom_communication.egg-info/zip-safe
 atom_communication/__init__.py
+atom_communication/serial_node.py
 atom_communication/tcp_servernode.py
+atom_communication/tserial.py
 resource/atom_communication
 test/test_copyright.py
 test/test_flake8.py

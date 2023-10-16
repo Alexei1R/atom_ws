@@ -1,0 +1,9 @@
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/install/strip.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/install.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/atom_core_logic_node.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/uninstall.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/install/local.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/test.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/list_install_components.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/edit_cache.dir
+/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/rebuild_cache.dir
