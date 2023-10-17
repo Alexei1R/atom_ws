@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'tcp_servernode = atom_communication.tcp_servernode:main',
+            'serial_node = atom_communication.serial_node:main',
         ],
     },
 )

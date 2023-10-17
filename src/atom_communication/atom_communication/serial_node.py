@@ -1,35 +1,38 @@
-#!/usr/bin/python3
-import time
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
 import serial
 
-print("NVIDIA Jetson Nano Developer Kit")
-
-
-serial_port = serial.Serial(
-    port="/dev/ttyTHS1",
-    baudrate=9600,
-)
-# Wait a second to let the port initialize
-time.sleep(1)
-
-try:
-    while True:
+class SerialPublisher(Node):
+    def __init__(self):
+        super().__init__('serial_publisher')
         
-        serial_port.write(b'1:90')
+        # Open the serial port
+        self.serial_port = serial.Serial(port="/dev/ttyTHS1", baudrate=9600)
+        
+        # Create a subscriber for the "pid_out" topic
+        self.subscription = self.create_subscription(String, 'pid_out', self.callback)
 
-        if serial_port.inWaiting() > 0:
-            data = serial_port.read()
-            print(data)
-            
+    def callback(self, msg):
+        try:
+            # Send the received message to the serial port
+            self.serial_port.write(b'1:' + msg.data.encode('ascii'))
 
+        except Exception as e:
+            self.get_logger().error(f"Error writing to serial port: {str(e)}")
 
-except KeyboardInterrupt:
-    print("Exiting Program")
+def main():
+    rclpy.init()
+    serial_publisher = SerialPublisher()
 
-except Exception as exception_error:
-    print("Error occurred. Exiting Program")
-    print("Error: " + str(exception_error))
+    try:
+        rclpy.spin(serial_publisher)
+    except KeyboardInterrupt:
+        pass
 
-finally:
-    serial_port.close()
-    pass
+    serial_publisher.destroy_node()
+    rclpy.shutdown()
+    serial_publisher.serial_port.close()
+
+if __name__ == '__main__':
+    main()

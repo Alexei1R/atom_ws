@@ -1,8 +1,6 @@
 import rclpy
 from rclpy.node import Node
-
-import time
-import serial
+import socket
 
 
 import socket
@@ -26,11 +24,6 @@ class TCPServerNode(Node):
     def __init__(self):
         super().__init__('tcp_server_node')
         self.server_socket = None
-        self.serial_port = serial.Serial(
-            port="/dev/ttyTHS1",
-            baudrate=9600,
-        )
-        
 
     def start_server(self, host, port):
         while rclpy.ok():
@@ -56,11 +49,6 @@ class TCPServerNode(Node):
                 break
             message = data.decode('utf-8')
             print(f"Received from client: {message}")
-            self.serial_port.write(message.encode('ascii') + b'\n')
-            if self.serial_port.inWaiting() > 0:
-                data = self.serial_port.read()
-                print(data)
-                
 
 
         print(f"Connection from {client_socket.getpeername()} closed.")

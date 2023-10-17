@@ -1,3 +1,4 @@
 [console_scripts]
+serial_node = atom_communication.serial_node:main
 tcp_servernode = atom_communication.tcp_servernode:main
 

@@ -23,8 +23,9 @@ public:
 	float GetOffsetCenter() { return laneCenterOffset; }
 
 private:
-	int offset = 100;
-	int heightoffset = 240;
+	int offset = 130;
+	int heightoffset = 160;
+	int bottomoffset = 400;
 	cv::Point2f srcVertices[4];
 	cv::Point2f dstVertices[4];
 	cv::Mat perspectiveMatrix;

@@ -79,13 +79,13 @@ FindLines::FindLines(cv::Mat &frame)
 
     srcVertices[0] = cv::Point(offset, heightoffset);
     srcVertices[1] = cv::Point(640 - offset, heightoffset);
-    srcVertices[2] = cv::Point(640, 480);
-    srcVertices[3] = cv::Point(0, 480);
+    srcVertices[2] = cv::Point(640, bottomoffset);
+    srcVertices[3] = cv::Point(0, bottomoffset);
 
     dstVertices[0] = cv::Point(0, 0);
     dstVertices[1] = cv::Point(640, 0);
-    dstVertices[2] = cv::Point(640, 480);
-    dstVertices[3] = cv::Point(0, 480);
+    dstVertices[2] = cv::Point(640, bottomoffset);
+    dstVertices[3] = cv::Point(0, bottomoffset);
 
     perspectiveMatrix = cv::getPerspectiveTransform(srcVertices, dstVertices);
     dst = cv::Mat(480, 640, CV_8UC3);
