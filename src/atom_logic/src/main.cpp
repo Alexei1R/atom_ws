@@ -63,7 +63,7 @@ public:
             PIDController_Update(&pid, 0, lines.GetOffsetCenter());
 
             std::cout<<std::round(pid.out)<<std::endl;
-			if (pid.out >= 0){
+			if (pid.out <= 0){
 				sprintf(serialBuffer, "%d\n" , 90 + (uint8_t)abs(std::round(pid.out)));
 			}
 			else{
