@@ -8,6 +8,7 @@ CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o: /home/toor/Desktop/atom_ws/sr
 CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/src/PID.cpp
 
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/FindLines.h
+CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/PID.h
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/src/main.cpp
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/builtin_interfaces/msg/duration.hpp
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/builtin_interfaces/msg/duration__struct.hpp
@@ -197,4 +198,7 @@ CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/sen
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/sensor_msgs/msg/image__traits.hpp
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/std_msgs/msg/header__struct.hpp
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/std_msgs/msg/header__traits.hpp
+CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/std_msgs/msg/string.hpp
+CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/std_msgs/msg/string__struct.hpp
+CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/std_msgs/msg/string__traits.hpp
 
