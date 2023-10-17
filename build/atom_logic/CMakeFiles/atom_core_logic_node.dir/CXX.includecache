@@ -16,14 +16,6 @@ opencv2/highgui.hpp
 
 /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/PID.h
 
-/home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/WebCamStream.h
-mutex
--
-opencv2/opencv.hpp
--
-opencv2/videoio.hpp
--
-
 /home/toor/Desktop/atom_ws/src/atom_logic/src/FindLines.cpp
 atom_logic/FindLines.h
 /home/toor/Desktop/atom_ws/src/atom_logic/src/atom_logic/FindLines.h
@@ -33,22 +25,6 @@ iostream
 /home/toor/Desktop/atom_ws/src/atom_logic/src/PID.cpp
 atom_logic/PID.h
 /home/toor/Desktop/atom_ws/src/atom_logic/src/atom_logic/PID.h
-
-/home/toor/Desktop/atom_ws/src/atom_logic/src/WebCamStream.cpp
-atom_logic/WebCamStream.h
-/home/toor/Desktop/atom_ws/src/atom_logic/src/atom_logic/WebCamStream.h
-iostream
--
-thread
--
-mutex
--
-opencv2/opencv.hpp
--
-opencv2/videoio/videoio_c.h
--
-opencv2/videoio.hpp
--
 
 /home/toor/Desktop/atom_ws/src/atom_logic/src/main.cpp
 rclcpp/rclcpp.hpp

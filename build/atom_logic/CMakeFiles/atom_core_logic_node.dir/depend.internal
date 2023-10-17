@@ -7,9 +7,6 @@ CMakeFiles/atom_core_logic_node.dir/src/FindLines.cpp.o
 CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o
  /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/PID.h
  /home/toor/Desktop/atom_ws/src/atom_logic/src/PID.cpp
-CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.o
- /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/WebCamStream.h
- /home/toor/Desktop/atom_ws/src/atom_logic/src/WebCamStream.cpp
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o
  /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/FindLines.h
  /home/toor/Desktop/atom_ws/src/atom_logic/src/main.cpp

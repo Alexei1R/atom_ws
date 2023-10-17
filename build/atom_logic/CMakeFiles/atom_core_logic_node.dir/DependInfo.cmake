@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/toor/Desktop/atom_ws/src/atom_logic/src/FindLines.cpp" "/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/atom_core_logic_node.dir/src/FindLines.cpp.o"
   "/home/toor/Desktop/atom_ws/src/atom_logic/src/PID.cpp" "/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o"
-  "/home/toor/Desktop/atom_ws/src/atom_logic/src/WebCamStream.cpp" "/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.o"
   "/home/toor/Desktop/atom_ws/src/atom_logic/src/main.cpp" "/home/toor/Desktop/atom_ws/build/atom_logic/CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

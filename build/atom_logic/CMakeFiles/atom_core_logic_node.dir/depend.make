@@ -7,9 +7,6 @@ CMakeFiles/atom_core_logic_node.dir/src/FindLines.cpp.o: /home/toor/Desktop/atom
 CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/PID.h
 CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/src/PID.cpp
 
-CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/WebCamStream.h
-CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/src/WebCamStream.cpp
-
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/include/atom_logic/FindLines.h
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /home/toor/Desktop/atom_ws/src/atom_logic/src/main.cpp
 CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o: /opt/ros/dashing/include/builtin_interfaces/msg/duration.hpp

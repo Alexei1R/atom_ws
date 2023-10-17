@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o"
   "CMakeFiles/atom_core_logic_node.dir/src/FindLines.cpp.o"
   "CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o"
-  "CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.o"
   "atom_core_logic_node.pdb"
   "atom_core_logic_node"
 )

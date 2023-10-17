@@ -247,33 +247,6 @@ src/PID.cpp.s:
 	$(MAKE) -f CMakeFiles/atom_core_logic_node.dir/build.make CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.s
 .PHONY : src/PID.cpp.s
 
-src/WebCamStream.o: src/WebCamStream.cpp.o
-
-.PHONY : src/WebCamStream.o
-
-# target to build an object file
-src/WebCamStream.cpp.o:
-	$(MAKE) -f CMakeFiles/atom_core_logic_node.dir/build.make CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.o
-.PHONY : src/WebCamStream.cpp.o
-
-src/WebCamStream.i: src/WebCamStream.cpp.i
-
-.PHONY : src/WebCamStream.i
-
-# target to preprocess a source file
-src/WebCamStream.cpp.i:
-	$(MAKE) -f CMakeFiles/atom_core_logic_node.dir/build.make CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.i
-.PHONY : src/WebCamStream.cpp.i
-
-src/WebCamStream.s: src/WebCamStream.cpp.s
-
-.PHONY : src/WebCamStream.s
-
-# target to generate assembly for a file
-src/WebCamStream.cpp.s:
-	$(MAKE) -f CMakeFiles/atom_core_logic_node.dir/build.make CMakeFiles/atom_core_logic_node.dir/src/WebCamStream.cpp.s
-.PHONY : src/WebCamStream.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -322,9 +295,6 @@ help:
 	@echo "... src/PID.o"
 	@echo "... src/PID.i"
 	@echo "... src/PID.s"
-	@echo "... src/WebCamStream.o"
-	@echo "... src/WebCamStream.i"
-	@echo "... src/WebCamStream.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
