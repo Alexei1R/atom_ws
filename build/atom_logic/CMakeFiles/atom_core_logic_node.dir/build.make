@@ -142,8 +142,6 @@ atom_core_logic_node: CMakeFiles/atom_core_logic_node.dir/src/main.cpp.o
 atom_core_logic_node: CMakeFiles/atom_core_logic_node.dir/src/FindLines.cpp.o
 atom_core_logic_node: CMakeFiles/atom_core_logic_node.dir/src/PID.cpp.o
 atom_core_logic_node: CMakeFiles/atom_core_logic_node.dir/build.make
-atom_core_logic_node: /opt/ros/dashing/lib/libimage_transport.so
-atom_core_logic_node: /opt/ros/dashing/lib/libmessage_filters.so
 atom_core_logic_node: /opt/ros/dashing/lib/librclcpp.so
 atom_core_logic_node: /opt/ros/dashing/lib/librcl.so
 atom_core_logic_node: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_c.so
@@ -155,6 +153,7 @@ atom_core_logic_node: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport
 atom_core_logic_node: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 atom_core_logic_node: /opt/ros/dashing/lib/librmw_implementation.so
 atom_core_logic_node: /opt/ros/dashing/lib/librmw.so
+atom_core_logic_node: /opt/ros/dashing/lib/librcutils.so
 atom_core_logic_node: /opt/ros/dashing/lib/librcl_logging_noop.so
 atom_core_logic_node: /opt/ros/dashing/lib/librosgraph_msgs__rosidl_generator_c.so
 atom_core_logic_node: /opt/ros/dashing/lib/librosgraph_msgs__rosidl_typesupport_c.so
@@ -164,12 +163,6 @@ atom_core_logic_node: /opt/ros/dashing/lib/librosgraph_msgs__rosidl_typesupport_
 atom_core_logic_node: /opt/ros/dashing/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
 atom_core_logic_node: /opt/ros/dashing/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
 atom_core_logic_node: /opt/ros/dashing/lib/librcl_yaml_param_parser.so
-atom_core_logic_node: /opt/ros/dashing/lib/libament_index_cpp.so
-atom_core_logic_node: /usr/lib/libPocoFoundation.so.50
-atom_core_logic_node: /opt/ros/dashing/lib/libconsole_bridge.so.0.4
-atom_core_logic_node: /opt/ros/dashing/lib/libclass_loader.so
-atom_core_logic_node: /opt/ros/dashing/lib/librcutils.so
-atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 atom_core_logic_node: /opt/ros/dashing/lib/libcv_bridge.so
 atom_core_logic_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_c.so
 atom_core_logic_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
@@ -230,8 +223,6 @@ atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_text.so.3.2.0
 atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.3.2.0
 atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0
 atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0
-atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libpcre.so
-atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libz.so
 atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0
 atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0
 atom_core_logic_node: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0

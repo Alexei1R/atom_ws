@@ -18,12 +18,12 @@ endif()
 # Find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(image_transport REQUIRED)
+# find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
-find_package(rosidl_typesupport_cpp REQUIRED)  # Added to resolve the missing type support error
+# find_package(rosidl_typesupport_cpp REQUIRED)  # Added to resolve the missing type support error
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
@@ -37,7 +37,7 @@ add_executable(atom_core_logic_node
 ament_target_dependencies(
   atom_core_logic_node
   "rclcpp"
-  "image_transport"
+  # "image_transport"
   "cv_bridge"
   "sensor_msgs"
   "std_msgs"
@@ -46,7 +46,7 @@ ament_target_dependencies(
 
 target_link_libraries(atom_core_logic_node
   ${OpenCV_LIBS}
-  tinyxml2  # Add the missing library
+  # tinyxml2  # Add the missing library
 )
 include_directories(
   include

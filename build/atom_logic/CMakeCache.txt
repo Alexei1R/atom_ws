@@ -232,7 +232,7 @@ TINYXML2_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinyxml2.so
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/dashing/lib/libcv_bridge.so
+_lib:FILEPATH=/opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport_opensplice_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/dashing/share/ament_cmake/cmake
