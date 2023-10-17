@@ -66,7 +66,7 @@ public:
             cv::resize(frame, frame, cv::Size(640, 480));
             frame.copyTo(m_FrameOut);
             lines->OnUpdate();
-            m_FrameOut = lines->GetPreprocessed();
+            m_FrameOut = lines->GetPreprocesed();
             std::cout << "Some message" << std::endl;
 
             RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", std::to_string(lines->GetOffesetCenter()));
