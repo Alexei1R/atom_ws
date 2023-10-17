@@ -69,7 +69,7 @@ public:
             m_FrameOut = lines->GetPreprocesed();
             std::cout << "Some message" << std::endl;
 
-            RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", std::to_string(lines->GetOffesetCenter()));
+            RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", std::to_string(lines->GetOffesetCenter()).c_str());
             publisher_->publish(std::to_string(lines->GetOffesetCenter()));
 
             // If the frame is empty, break immediately
