@@ -1,85 +1,64 @@
-#include <iostream>
-#include <memory>
 #include <rclcpp/rclcpp.hpp>
-#include "std_msgs/msg/float32.hpp"
+#include <sensor_msgs/msg/image.hpp>
 #include <opencv2/opencv.hpp>
-#include "atom_logic/PID.h"
-#include "atom_logic/FindLines.h"
-#include "atom_logic/WebCamStream.h"
+#include "atom_logic/FindLines.h"  // Replace with your actual message types
 
-
-
-#define PID_KP 2.0f
-#define PID_KI 0.5f
-#define PID_KD 0.25f
-
-#define PID_TAU 0.02f
-
-#define PID_LIM_MIN -25.0f
-#define PID_LIM_MAX 25.0f
-
-#define PID_LIM_MIN_INT -5.0f
-#define PID_LIM_MAX_INT 5.0f
-
-#define SAMPLE_TIME_S 0.01f
-
-#define SIMULATION_TIME_MAX 4.0f
-
-int left = 200;
-int right = 400;
-
-
-
-
-class LineFollowerNode : public rclcpp::Node {
+class WebcamNode : public rclcpp::Node
+{
 public:
-    LineFollowerNode() : Node("line_follower_node") {
-        publisher_ = this->create_publisher<std_msgs::msg::Float32>("offset_center", 10);
-
-        // Your initialization code here
+    WebcamNode() : Node("atom_core_logic_node")
+    {
+        // Open a webcam for video capture
         cv::VideoCapture cap(0);
-        if (!cap.isOpened()) {
-            RCLCPP_ERROR(this->get_logger(), "Error opening video stream or file");
+
+        if (!cap.isOpened())
+        {
+            RCLCPP_ERROR(get_logger(), "Error opening video stream or file");
             return;
         }
 
-        cv::Mat m_FrameOut;
-        FindLines *lines = new FindLines(m_FrameOut, left, right);
-        lines->OnAttach();
+        // Create a publisher to publish processed images
+        image_pub_ = create_publisher<sensor_msgs::msg::Image>("processed_image", 10);
 
-        while (rclcpp::ok()) {
+        // Create a FindLines instance (assuming this class processes images)
+        FindLines lines(m_FrameOut, 200, 400);  // You might need to adjust the arguments
+        lines.OnAttach();
+
+        while (rclcpp::ok()) {  // Use a while loop to continuously process frames
             cv::Mat frame;
             cap >> frame;
             cv::resize(frame, frame, cv::Size(640, 480));
             frame.copyTo(m_FrameOut);
-            lines->OnUpdate();
-            m_FrameOut = lines->GetPreprocessed();
-            float offset_center = lines->GetOffsetCenter();
-            std::cout << offset_center << std::endl;
+            lines.OnUpdate();
+            cv::resize(lines.GetPreprocessed(), m_FrameOut, cv::Size(320, 240));
 
-            std_msgs::msg::Float32 msg;
-            msg.data = offset_center;
-            publisher_->publish(msg);
+            // Convert the processed image to a sensor_msgs::msg::Image
+            sensor_msgs::msg::Image img_msg;
+            img_msg.header.stamp = this->now();
+            img_msg.header.frame_id = "camera_frame";  // Replace with the correct frame_id
+            img_msg.width = m_FrameOut.cols;
+            img_msg.height = m_FrameOut.rows;
+            img_msg.step = m_FrameOut.step;
+            img_msg.data = std::vector<uint8_t>(m_FrameOut.data, m_FrameOut.data + m_FrameOut.total() * m_FrameOut.elemSize());
+            img_msg.encoding = "bgr8";  // Adjust the encoding as needed
 
-            // If the frame is empty, break immediately
-            if (frame.empty()) {
-                break;
-            }
-            cv::resize(m_FrameOut, m_FrameOut, cv::Size(320, 240));
+            image_pub_->publish(img_msg);
+
+            // Display the processed frame in an OpenCV window
             cv::imshow("Lines", m_FrameOut);
-            if (cv::waitKey(5) >= 0) {
-                break;
-            }
+            cv::waitKey(5);
         }
     }
 
 private:
-    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr publisher_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr image_pub_;
+    cv::Mat m_FrameOut;
 };
 
-int main(int argc, char *argv[]) {
+int main(int argc, char** argv)
+{
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<LineFollowerNode>());
+    rclcpp::spin(std::make_shared<WebcamNode>());
     rclcpp::shutdown();
     return 0;
 }

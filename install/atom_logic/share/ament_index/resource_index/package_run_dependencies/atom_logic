@@ -1,1 +1,1 @@
-rclcpp;ament_lint_auto;ament_lint_common
+rclcpp;tinyxml2_vendor;std_msgs;image_transport;cv_bridge;sensor_msgs;libopencv-dev;libpcl-all-dev;ament_lint_auto;ament_lint_common
