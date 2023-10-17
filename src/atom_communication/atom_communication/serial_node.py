@@ -16,6 +16,8 @@ class SerialPublisher(Node):
     def callback(self, msg):
         try:
             # Send the received message to the serial port
+            # print msg.data
+            print(f"Sending to serial port: {msg.data}")
             self.serial_port.write(b'1:' + msg.data.encode('ascii'))
 
         except Exception as e:
