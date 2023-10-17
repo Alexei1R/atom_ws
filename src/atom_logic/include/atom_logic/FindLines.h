@@ -24,8 +24,8 @@ public:
 
 private:
 	int offset = 130;
-	int heightoffset = 160;
-	int bottomoffset = 400;
+	int heightoffset = 180;
+	int bottomoffset = 350;
 	cv::Point2f srcVertices[4];
 	cv::Point2f dstVertices[4];
 	cv::Mat perspectiveMatrix;
