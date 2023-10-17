@@ -23,14 +23,19 @@ public:
         // Create a FindLines instance (assuming this class processes images)
         FindLines lines(m_FrameOut);  // You might need to adjust the arguments
         lines.OnAttach();
+        Run();
 
+        
+    }
+    private:
+    void Run(){
         while (rclcpp::ok()) {  // Use a while loop to continuously process frames
             cv::Mat frame;
             cap >> frame;
             cv::resize(frame, frame, cv::Size(640, 480));
             frame.copyTo(m_FrameOut);
             lines.OnUpdate();
-            cv::resize(lines.GetPreprocessed(), m_FrameOut, cv::Size(320, 240));
+            // cv::resize(lines.GetPreprocessed(), m_FrameOut, cv::Size(320, 240));
 
             // Convert the processed image to a sensor_msgs::msg::Image
             sensor_msgs::msg::Image img_msg;
