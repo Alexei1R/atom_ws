@@ -34,7 +34,7 @@ add_executable(atom_core_logic_node
   "src/main.cpp"
   "src/FindLines.cpp"
   "src/PID.cpp"
-  "src/WebCamStream.cpp"
+  # "src/WebCamStream.cpp"
 
 )
 ament_target_dependencies(
