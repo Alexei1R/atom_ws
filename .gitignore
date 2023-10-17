@@ -46,3 +46,7 @@ build/atom_test/colcon_command_prefix_setup_py.sh.env
 build/atom_test/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
 install/atom_logic/lib/atom_logic/atom_core_logic_node
 log/latest_build
+build/atom_communication/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
+build/atom_inference/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
+build/atom_test/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
+log/latest_build
