@@ -68,10 +68,11 @@ public:
             lines->OnUpdate();
             m_FrameOut = lines->GetPreprocesed();
             std::cout << "Some message" << std::endl;
-            std_msgs::msg::String message; // Create a message of the correct type
-            message.data = std::to_string(lines->GetOffesetCenter()); // Set the message data
-            publisher_->publish(message); // Publish the message
+            // std_msgs::msg::String message; // Create a message of the correct type
+            // message.data = std::to_string(lines->GetOffesetCenter()); // Set the message data
+            // publisher_->publish(message); // Publish the message
             RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", std::to_string(lines->GetOffesetCenter()).c_str());
+            // publisher_->publish(std::to_string(lines->GetOffesetCenter()));
 
             // If the frame is empty, break immediately
             if (frame.empty())
