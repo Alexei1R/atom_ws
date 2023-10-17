@@ -194,7 +194,7 @@ void FindLines::PreprocessLine(cv::Mat &org)
     // Show results
 }
 
-cv::Mat &FindLines::GetPreprocesed()
+cv::Mat &FindLines::GetPreprocessed()
 {
     return m_Preprocesed;
 }

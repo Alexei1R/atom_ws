@@ -19,8 +19,8 @@ public:
 	void PreprocessLine(cv::Mat &org);
 
 public:
-	cv::Mat &GetPreprocesed();
-	float GetOffesetCenter() { return laneCenterOffset; }
+	cv::Mat &GetPreprocessed();
+	float GetOffsetCenter() { return laneCenterOffset; }
 
 private:
 	int offset = 100;
