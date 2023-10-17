@@ -4,6 +4,17 @@
 #include "atom_logic/FindLines.h"
 #include "atom_logic/WebCamStream.h"
 
+
+#include <chrono>
+#include <functional>
+#include <memory>
+#include <string>
+
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
+#include <sensor_msgs/msg/image.hpp>
+
+
 #define PID_KP 2.0f
 #define PID_KI 0.5f
 #define PID_KD 0.25f
@@ -23,41 +34,70 @@
 int left = 200;
 int right = 400;
 
-int main()
-{
-    cv::VideoCapture cap(0);
 
-    if (!cap.isOpened())
+
+using namespace std::chrono_literals;
+
+class Application : public rclcpp::Node {
+public:
+    Application()
+    : Node("minimal_publisher"), count_(0)
     {
-        std::cout << "Error opening video stream or file" << std::endl;
-        return -1;
+        publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
+        cv::VideoCapture cap(0);
+
+        if (!cap.isOpened())
+        {
+            std::cout << "Error opening video stream or file" << std::endl;
+            return;
+        }
+
+        // Initialize FindLines
+        
+        lines = new FindLines(m_FrameOut, left, right);
+        lines->OnAttach();
+        
+    }
+     
+    void Run(){
+        while (rclcpp::ok()) { // Continue as long as ROS is running
+            cv::Mat frame;
+            cap >> frame;
+            cv::resize(frame, frame, cv::Size(640, 480));
+            frame.copyTo(m_FrameOut);
+            lines->OnUpdate();
+            m_FrameOut = lines->GetPreprocessed();
+            std::cout << "Some message" << std::endl;
+
+            RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", std::to_string(lines->GetOffsetCenter()));
+            publisher_->publish(std::to_string(lines->GetOffsetCenter()));
+
+            // If the frame is empty, break immediately
+            if (frame.empty())
+            {
+                break;
+            }
+            cv::resize(m_FrameOut, m_FrameOut, cv::Size(320, 240));
+            cv::imshow("Lines", m_FrameOut);
+            if (cv::waitKey(5) >= 0)
+            {
+                break;
+            }
+        }
     }
 
+private:
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    cv::VideoCapture cap;
     cv::Mat m_FrameOut;
-    FindLines *lines = new FindLines(m_FrameOut, left, right);
-    lines->OnAttach();
+    FindLines* lines;
+    int count_;
+};
 
-    while (true)
-    {
-        cv::Mat frame;
-        cap >> frame;
-        cv::resize(frame, frame, cv::Size(640, 480));
-        frame.copyTo(m_FrameOut);
-        lines->OnUpdate();
-        m_FrameOut = lines->GetPreprocesed();
-
-        // If the frame is empty, break immediately
-        if (frame.empty())
-        {
-            break;
-        }
-        cv::resize(m_FrameOut, m_FrameOut, cv::Size(320, 240));
-        cv::imshow("Lines", m_FrameOut);
-        if (cv::waitKey(5) >= 0)
-        {
-            break;
-        }
-    }
-
+int main(int argc, char** argv) {
+    rclcpp::init(argc, argv);
+    auto application = std::make_shared<Application>();
+    application->Run();
+    rclcpp::shutdown();
     return 0;
 }

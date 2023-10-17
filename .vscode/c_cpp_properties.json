@@ -4,7 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/src/atom_logic/include"
+                "${workspaceFolder}/src/atom_logic/include",
+                "/opt/ros/dashing/include/**"
+
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
