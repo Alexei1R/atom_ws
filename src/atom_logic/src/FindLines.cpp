@@ -18,7 +18,7 @@ std::vector<cv::Point2f> slidingWindow(cv::Mat image, cv::Rect window)
 
         float avgX = 0.0f;
 
-        for (int i = 0; i < locations.size(); ++i) // Calculate average X position
+        for (unsigned int i = 0; i < locations.size(); ++i) // Calculate average X position
         {
             float x = locations[i].x;
             avgX += window.x + x;
@@ -140,7 +140,7 @@ void FindLines::PreprocessLine(cv::Mat &org)
     std::vector<cv::Point2f> outPts;
     cv::perspectiveTransform(pts, outPts, invertedPerspectiveMatrix); // Transform points back into original image space
     leftLanePts = outPts;
-    for (int i = 0; i < outPts.size() - 1; ++i)
+    for (unsigned int i = 0; i < outPts.size() - 1; ++i)
     {
         line(org, outPts[i], outPts[i + 1], cv::Scalar(255, 0, 0), 3);
         allPts.push_back(cv::Point(outPts[i].x, outPts[i].y));
@@ -151,7 +151,7 @@ void FindLines::PreprocessLine(cv::Mat &org)
     cv::Mat out;
     cvtColor(processed, out, cv::COLOR_GRAY2BGR); // Conver the processing image to color so that we can visualise the lines
 
-    for (int i = 0; i < pts.size() - 1; ++i) // Draw a line on the processed image
+    for (unsigned int i = 0; i < pts.size() - 1; ++i) // Draw a line on the processed image
         line(out, pts[i], pts[i + 1], cv::Scalar(255, 0, 0));
 
     // Sliding window for the right side
@@ -160,7 +160,7 @@ void FindLines::PreprocessLine(cv::Mat &org)
     perspectiveTransform(pts, outPts, invertedPerspectiveMatrix);
     rightLanePts = outPts;
 
-    for (int i = 0; i < outPts.size() - 1; ++i)
+    for (unsigned int i = 0; i < outPts.size() - 1; ++i)
     {
         line(org, outPts[i], outPts[i + 1], cv::Scalar(0, 0, 255), 3);
         allPts.push_back(cv::Point(outPts[outPts.size() - i - 1].x, outPts[outPts.size() - i - 1].y));
@@ -168,7 +168,7 @@ void FindLines::PreprocessLine(cv::Mat &org)
 
     allPts.push_back(cv::Point(outPts[0].x - (outPts.size() - 1), outPts[0].y));
 
-    for (int i = 0; i < pts.size() - 1; ++i)
+    for (unsigned int i = 0; i < pts.size() - 1; ++i)
         line(out, pts[i], pts[i + 1], cv::Scalar(0, 0, 255));
 
     std::vector<std::vector<cv::Point>> arr;
