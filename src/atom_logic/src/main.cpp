@@ -23,12 +23,7 @@ public:
         // Create a FindLines instance (assuming this class processes images)
         FindLines lines(m_FrameOut);  // You might need to adjust the arguments
         lines.OnAttach();
-        Run();
 
-        
-    }
-    private:
-    void Run(){
         while (rclcpp::ok()) {  // Use a while loop to continuously process frames
             cv::Mat frame;
             cap >> frame;
