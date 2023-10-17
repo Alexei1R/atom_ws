@@ -8,7 +8,7 @@
 class FindLines
 {
 public:
-	FindLines(cv::Mat &frame, int left, int right);
+	FindLines(cv::Mat &frame);
 
 public:
 	void OnAttach();

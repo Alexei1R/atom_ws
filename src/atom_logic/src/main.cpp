@@ -21,7 +21,7 @@ public:
         image_pub_ = create_publisher<sensor_msgs::msg::Image>("processed_image", 10);
 
         // Create a FindLines instance (assuming this class processes images)
-        FindLines lines(m_FrameOut, 200, 400);  // You might need to adjust the arguments
+        FindLines lines(m_FrameOut);  // You might need to adjust the arguments
         lines.OnAttach();
 
         while (rclcpp::ok()) {  // Use a while loop to continuously process frames

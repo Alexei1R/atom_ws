@@ -71,7 +71,7 @@ float calculateOffset(const std::vector<cv::Point2f> &points, const cv::Size &im
     return averageOffset;
 }
 
-FindLines::FindLines(cv::Mat &frame, int left, int right)
+FindLines::FindLines(cv::Mat &frame)
     : m_Frame(frame)
 {
 
