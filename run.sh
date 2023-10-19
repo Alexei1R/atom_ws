@@ -3,6 +3,8 @@
 # Source ROS 2 setup (adjust the path if needed)
 source /opt/ros/dashing/setup.bash
 chmod a+rw /dev/ttyTHS1
+sudo lsof -i :12345
+
 
 cd /home/toor/Desktop/atom_ws/
 colcon build
