@@ -8,8 +8,8 @@ def generate_launch_description():
         DeclareLaunchArgument('param_file', description='Full path to the parameter file to load'),
         Node(
             package='atom_logic',
-            executable='atom_core_logic_node',
-            name='atom_core_logic_node',
+            node_executable='atom_core_logic_node',
+            node_name='atom_core_logic_node',
             output='screen',
         ),
         
