@@ -5,7 +5,6 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('param_file', description='Full path to the parameter file to load'),
         Node(
             package='atom_logic',
             node_executable='atom_core_logic_node',
