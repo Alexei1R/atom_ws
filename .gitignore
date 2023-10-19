@@ -51,3 +51,7 @@ build/atom_communication/prefix_override/__pycache__/sitecustomize.cpython-36.py
 build/atom_inference/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
 build/atom_test/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
 log/latest_build
+build/atom_communication/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
+build/atom_inference/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
+build/atom_test/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
+log/latest_build
