@@ -1,4 +1,5 @@
 log/
+build/
 install/atom_inference/
 build/atom_communication
 build/atom_communication/prefix_override/__pycache__/sitecustomize.cpython-36.pyc
