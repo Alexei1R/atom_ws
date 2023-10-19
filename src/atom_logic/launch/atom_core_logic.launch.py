@@ -11,10 +11,6 @@ def generate_launch_description():
             executable='atom_core_logic_node',
             name='atom_core_logic_node',
             output='screen',
-            parameters=[LaunchConfiguration('param_file')],
         ),
-        LogInfo(
-            condition=LaunchConfiguration('param_file') != '',
-            msg="Loading parameters from file: [{}].".format(LaunchConfiguration('param_file'))
-        )
+        
     ])
