@@ -68,7 +68,7 @@ class TCPServerNode(Node):
             # Check if the message is a command
             if message == "?start?":
                 pid_message1 = String()
-                pid_message1.data = f"2:{73}\n"
+                pid_message1.data = f"2:{75}\n"
                 self.pid_out.publish(pid_message1)
                 self.send_message("2:speed:3")
                 print("start")
