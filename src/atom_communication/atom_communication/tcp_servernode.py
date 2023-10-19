@@ -70,12 +70,12 @@ class TCPServerNode(Node):
                 pid_message1 = String()
                 pid_message1.data = f"1:{95}\n"
                 self.pid_out.publish(pid_message1)
-                self.send_message("1:speed:3")
+                self.send_message("2:speed:3")
                 print("start")
             elif message == "?stop?":
                 self.send_message("1:speed:0")
                 pid_message1 = String()
-                pid_message1.data = f"1:{90}\n"
+                pid_message1.data = f"2:{90}\n"
                 self.pid_out.publish(pid_message1)
                 print("stop")
             elif message == "?park?":
