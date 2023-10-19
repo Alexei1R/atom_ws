@@ -17,7 +17,7 @@ def generate_launch_description():
             node_executable='atom_core_logic_node',  # Specify the correct executable name
             name='atom_core_logic_node',
             output='screen',
-            condition=IfCondition(LaunchConfiguration('use_atom_core_logic_node')),
+            condition=IfCondition(LaunchConfiguration('atom_core_logic_node')),
         ),
 
         # # Include the communication.launch.py file from atom_communication package
