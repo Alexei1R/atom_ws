@@ -80,6 +80,8 @@ class TCPServerNode(Node):
                 print("stop")
 
                 
+
+                
             elif message == "?park?":
                 self.send_message("3:parking:100")
                 print("park")

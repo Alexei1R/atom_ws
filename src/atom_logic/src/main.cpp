@@ -57,6 +57,7 @@ public:
             cap >> frame;
             cv::resize(frame, frame, cv::Size(640, 480));
             frame.copyTo(m_FrameOut);
+            
             lines.OnUpdate();
             // cv::resize(lines.GetPreprocessed(), m_FrameOut, cv::Size(320, 240));
 
