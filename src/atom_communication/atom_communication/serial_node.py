@@ -10,7 +10,10 @@ class SerialPublisher(Node):
         # Open the serial port
         self.serial_port = serial.Serial(port="/dev/ttyTHS1", baudrate=9600)
         
-        # Create a subscriber for the "pid_out" topic
+
+
+
+        # Create a subscriber for the "pid_out" t
         self.subscription = self.create_subscription(String, 'pid_out', self.callback)
 
     def callback(self, msg):
