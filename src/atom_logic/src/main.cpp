@@ -70,7 +70,7 @@ public:
 				sprintf(serialBuffer, "1:%d\n" , 90 - (uint8_t)abs(std::round(pid.out)));
 			}
 
-            // std::cout<<serialBuffer<<std::endl;
+            std::cout<<serialBuffer<<std::endl;
             //publish pid
             auto pid_msg = std_msgs::msg::String();
             pid_msg.data = serialBuffer;
