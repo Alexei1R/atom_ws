@@ -77,17 +77,17 @@ public:
             pid_pub_->publish(pid_msg);
 
 
-            // Convert the processed image to a sensor_msgs::msg::Image
-            sensor_msgs::msg::Image img_msg;
-            img_msg.header.stamp = this->now();
-            img_msg.header.frame_id = "camera_frame";  // Replace with the correct frame_id
-            img_msg.width = m_FrameOut.cols;
-            img_msg.height = m_FrameOut.rows;
-            img_msg.step = m_FrameOut.step;
-            img_msg.data = std::vector<uint8_t>(m_FrameOut.data, m_FrameOut.data + m_FrameOut.total() * m_FrameOut.elemSize());
-            img_msg.encoding = "bgr8";  // Adjust the encoding as needed
+            // // Convert the processed image to a sensor_msgs::msg::Image
+            // sensor_msgs::msg::Image img_msg;
+            // img_msg.header.stamp = this->now();
+            // img_msg.header.frame_id = "camera_frame";  // Replace with the correct frame_id
+            // img_msg.width = m_FrameOut.cols;
+            // img_msg.height = m_FrameOut.rows;
+            // img_msg.step = m_FrameOut.step;
+            // img_msg.data = std::vector<uint8_t>(m_FrameOut.data, m_FrameOut.data + m_FrameOut.total() * m_FrameOut.elemSize());
+            // img_msg.encoding = "bgr8";  // Adjust the encoding as needed
 
-            image_pub_->publish(img_msg);
+            // image_pub_->publish(img_msg);
 
             // Display the processed frame in an OpenCV window
             cv::imshow("Lines", m_FrameOut);
