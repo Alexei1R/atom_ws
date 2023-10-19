@@ -16,7 +16,7 @@ from std_msgs.msg import Int16
 
 # use path for library and engine file
 model = YoloTRT(library=r"src/atom_inference/atom_inference/yolov5/build/libmyplugins.so", engine=r"src/atom_inference/atom_inference/yolov5/build/best.engine", conf=0.5, yolo_ver="v5")
-cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
+cap = cv2.VideoCapture(0)
 
 
 
