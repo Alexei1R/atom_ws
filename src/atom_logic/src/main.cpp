@@ -64,10 +64,10 @@ public:
 
             // std::cout<<std::round(pid.out)<<std::endl;
 			if (pid.out <= 0){
-				sprintf(serialBuffer, "2:%d\n" , 90 + (uint8_t)abs(std::round(pid.out)));
+				sprintf(serialBuffer, "1:%d\n" , 90 + (uint8_t)abs(std::round(pid.out)));
 			}
 			else{
-				sprintf(serialBuffer, "2:%d\n" , 90 - (uint8_t)abs(std::round(pid.out)));
+				sprintf(serialBuffer, "1:%d\n" , 90 - (uint8_t)abs(std::round(pid.out)));
 			}
 
             std::cout<<serialBuffer<<std::endl;

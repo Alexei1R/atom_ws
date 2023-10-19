@@ -68,14 +68,14 @@ class TCPServerNode(Node):
             # Check if the message is a command
             if message == "?start?":
                 pid_message1 = String()
-                pid_message1.data = f"1:{95}"
+                pid_message1.data = f"1:{95}\n"
                 self.pid_out.publish(pid_message1)
                 self.send_message("1:speed:3")
                 print("start")
             elif message == "?stop?":
                 self.send_message("1:speed:0")
                 pid_message1 = String()
-                pid_message1.data = f"1:{90}"
+                pid_message1.data = f"1:{90}\n"
                 self.pid_out.publish(pid_message1)
                 print("stop")
             elif message == "?park?":
@@ -117,11 +117,11 @@ class TCPServerNode(Node):
 
                             # Create and publish messages in the desired format
                             pid_message1 = String()
-                            pid_message1.data = f"1:{value1}"
+                            pid_message1.data = f"1:{value1}\n"
                             self.pid_out.publish(pid_message1)
 
                             pid_message2 = String()
-                            pid_message2.data = f"2:{value2}"
+                            pid_message2.data = f"2:{value2}\n"
                             self.pid_out.publish(pid_message2)
 
 
