@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -Wextra -Wpedantic -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/include/opencv -I/opt/ros/dashing/include -I/home/toor/Desktop/atom_ws/src/atom_logic/include 
+CXX_INCLUDES = -isystem /usr/local/include/opencv4 -I/opt/ros/dashing/include -I/home/toor/Desktop/atom_ws/src/atom_logic/include 
 

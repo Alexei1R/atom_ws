@@ -12,7 +12,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/opencv"
+  "/usr/local/include/opencv4"
   "/opt/ros/dashing/include"
   "/home/toor/Desktop/atom_ws/src/atom_logic/include"
   )

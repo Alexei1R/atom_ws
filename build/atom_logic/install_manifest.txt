@@ -1,4 +1,5 @@
 /home/toor/Desktop/atom_ws/install/atom_logic/lib/atom_logic/atom_core_logic_node
+/home/toor/Desktop/atom_ws/install/atom_logic/share/atom_logic//launch/logic.launch.py
 /home/toor/Desktop/atom_ws/install/atom_logic/share/ament_index/resource_index/package_run_dependencies/atom_logic
 /home/toor/Desktop/atom_ws/install/atom_logic/share/ament_index/resource_index/parent_prefix_path/atom_logic
 /home/toor/Desktop/atom_ws/install/atom_logic/share/atom_logic/environment/ament_prefix_path.sh
