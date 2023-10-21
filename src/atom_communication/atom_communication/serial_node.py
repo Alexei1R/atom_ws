@@ -18,10 +18,12 @@ class SerialPublisher(Node):
 
     def callback(self, msg):
         try:
+
+            data  = "2:80"
             # Send the received message to the serial port
             # print msg.data
             print(f"Sending to serial port: {msg.data}")
-            self.serial_port.write(msg.data.encode('ascii'))
+            self.serial_port.write(data.encode('ascii'))
 
         except Exception as e:
             self.get_logger().error(f"Error writing to serial port: {str(e)}")
